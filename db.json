@@ -45,7 +45,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "黑色;S"
+        "value": "黑色;S",
+        "quantity": 100
       },
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/720/270/12449072027_1635195196.jpg",
@@ -53,7 +54,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "黑色;M"
+        "value": "黑色;M",
+        "quantity": 100
       },
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/720/270/12449072027_1635195196.jpg",
@@ -61,7 +63,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "黑色;L"
+        "value": "黑色;L",
+        "quantity": 100
       },
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/976/630/12449036679_1635195196.jpg",
@@ -69,7 +72,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "橘红色;S"
+        "value": "橘红色;S",
+        "quantity": 100
       },
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/976/630/12449036679_1635195196.jpg",
@@ -77,7 +81,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "橘红色;M"
+        "value": "橘红色;M",
+        "quantity": 100
       },
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/976/630/12449036679_1635195196.jpg",
@@ -85,7 +90,8 @@
         "price": "5.69",
         "rmb_price": "37",
         "name": null,
-        "value": "橘红色;L"
+        "value": "橘红色;L",
+        "quantity": 100
       }
     ],
     "skus": [
@@ -169,7 +175,8 @@
         "price": "15.08",
         "rmb_price": "98",
         "name": null,
-        "value": "20509:28317;1627207:4807735606"
+        "value": "20509:28317;1627207:4807735606",
+        "quantity": 100
       },
       {
         "image_url": "https://img.alicdn.com/imgextra/i2/2925492262/O1CN01MIIvzh1Sa2TPLfCGO_!!2925492262.jpg",
@@ -177,7 +184,8 @@
         "price": "15.08",
         "rmb_price": "98",
         "name": null,
-        "value": "20509:28318;1627207:4807735606"
+        "value": "20509:28318;1627207:4807735606",
+        "quantity": 100
       },
       {
         "image_url": "https://img.alicdn.com/imgextra/i2/2925492262/O1CN01MIIvzh1Sa2TPLfCGO_!!2925492262.jpg",
@@ -185,7 +193,8 @@
         "price": "15.08",
         "rmb_price": "98",
         "name": null,
-        "value": "20509:28317;1627207:6475050864"
+        "value": "20509:28317;1627207:6475050864",
+        "quantity": 100
       },
       {
         "image_url": "https://img.alicdn.com/imgextra/i2/2925492262/O1CN01MIIvzh1Sa2TPLfCGO_!!2925492262.jpg",
@@ -193,7 +202,8 @@
         "price": "15.08",
         "rmb_price": "98",
         "name": null,
-        "value": "20509:28318;1627207:6475050864"
+        "value": "20509:28318;1627207:6475050864",
+        "quantity": 100
       }
     ],
     "skus": [
