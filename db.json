@@ -1,5 +1,6 @@
 {
   "product_set": {
+    "item_properties": [],
     "set_values": [
       {
         "image_url": "https://cbu01.alicdn.com/img/ibank/2019/720/270/12449072027_1635195196.jpg",
@@ -219,6 +220,108 @@
     "url": "http://detail.1688.com/offer/606459254318.html"
   },
   "product": {
+    "item_properties": [
+      {
+        "name": "品牌",
+        "value": "纤俊美 "
+      },
+      {
+        "name": "适用年龄",
+        "value": "25-29周岁 "
+      },
+      {
+        "name": "尺码",
+        "value": "S M L XL 2XL 3XL 4XL "
+      },
+      {
+        "name": "图案",
+        "value": "纯色 "
+      },
+      {
+        "name": "风格",
+        "value": "通勤 "
+      },
+      {
+        "name": "通勤",
+        "value": "韩版 "
+      },
+      {
+        "name": "领型",
+        "value": "连帽 "
+      },
+      {
+        "name": "大码女装分类",
+        "value": "棉衣 "
+      },
+      {
+        "name": "衣门襟",
+        "value": "拉链 "
+      },
+      {
+        "name": "颜色分类",
+        "value": "1526黑色. 1526军绿. 1526红色. 1526粉色. 9901军绿. 9901黑色. 9901红色. 9901灰色. 8817黑色 8817焦糖色 8817军绿色 8866红色 8866蓝色 8866黑色 8867蓝色 8867黑色 8867红色 "
+      },
+      {
+        "name": "袖型",
+        "value": "常规 "
+      },
+      {
+        "name": "填充物",
+        "value": "棉96%及以上 "
+      },
+      {
+        "name": "组合形式",
+        "value": "单件 "
+      },
+      {
+        "name": "货号",
+        "value": "S1526 "
+      },
+      {
+        "name": "成分含量",
+        "value": "96%及以上 "
+      },
+      {
+        "name": "年份季节",
+        "value": "2017年冬季 "
+      },
+      {
+        "name": "袖长",
+        "value": "长袖 "
+      },
+      {
+        "name": "穿着方式",
+        "value": "开衫 "
+      },
+      {
+        "name": "厚薄",
+        "value": "加厚 "
+      },
+      {
+        "name": "衣长",
+        "value": "中长款 "
+      },
+      {
+        "name": "服装版型",
+        "value": "修身 "
+      },
+      {
+        "name": "服装款式细节",
+        "value": "拉链 "
+      },
+      {
+        "name": "服饰工艺",
+        "value": "立体裁剪 "
+      },
+      {
+        "name": "销售渠道类型",
+        "value": "纯电商(只在线上销售) "
+      },
+      {
+        "name": "材质成分",
+        "value": "聚酯纤维100% "
+      }
+    ],
     "set_values": [],
     "description": "<p style=\"white-space: normal;\"><img alt=\"\" id=\"0b191db2-5b77-4757-b2e2-262afb38c6d7\" class=\"\" src=\"https://img.alicdn.com/imgextra/i4/2925492262/TB22J_qjPnD8KJjSspbXXbbEXXa_!!2925492262.jpg\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: middle;\"/></p><p style=\"white-space: normal;\"><img alt=\"\" id=\"e530e198-b1ad-4a46-985f-0a2e2c23b5fd\" class=\"\" src=\"https://img.alicdn.com/imgextra/i2/2925492262/O1CN011Sa2Mq4Z5QN4yj0_!!2925492262.jpg\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: middle;\"/></p><p style=\"white-space: normal;\"><img alt=\"\" id=\"386c81db-37e5-40ac-8b37-eb68c332bbb2\" class=\"\" src=\"https://img.alicdn.com/imgextra/i1/2925492262/TB2PKvXbLxNTKJjy0FjXXX6yVXa_!!2925492262.jpg\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: middle;\"/></p><p style=\"white-space: normal;\"><img alt=\"\" id=\"a95f533b-0984-49a7-9339-797e48d1f8c5\" class=\"\" src=\"https://img.alicdn.com/imgextra/i4/2925492262/TB2jf_Ud_nI8KJjSszgXXc8ApXa_!!2925492262.jpg\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: middle;\"/></p><p style=\"white-space: normal;\"><img alt=\"\" id=\"d9fc3975-de70-45aa-a0e2-b0f1c766a09a\" class=\"\" src=\"https://img.alicdn.com/imgextra/i4/2925492262/O1CN01nkU9Wq1Sa2TQDtGM7_!!2925492262.jpg\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: middle;\"/></p>",
     "description_url": "https://mdetail.tmall.com/templates/pages/desc?id=559314779296",
