@@ -425,5 +425,92 @@
       }
     ],
     "url": "https://item.taobao.com/item.htm?id=559314779296"
-  }
+  },
+  "cart_items": [
+    {
+      "source_id": 1,
+      "product_id": "539708924248",
+      "product_name": "女士大码薄棉服轻薄款2019羽绒棉衣女中长款中年妈妈冬装外套棉袄",
+      "product_image": "https://img.alicdn.com/imgextra/i4/736781331/TB2WDOzXY5K.eBjy0FnXXaZzVXa_!!736781331.jpg",
+      "skus": [
+        {
+          "id": "0fc2e285-fa17-48b6-b5ff-6dea9cf7e5d3",
+          "image_url": "https://img.alicdn.com/imgextra/i4/736781331/TB2WDOzXY5K.eBjy0FnXXaZzVXa_!!736781331.jpg",
+          "quantity": 1,
+          "price": 61.23,
+          "rmb_price": 0,
+          "sku_id": "3544080781848",
+          "sku_name": "L(建议80-95斤)(20509:671642429);黑色(1627207:28341);"
+        }
+      ],
+      "min_quantity": 1,
+      "ladder_prices": []
+    },
+    {
+      "source_id": 1,
+      "product_id": "539708924248",
+      "product_name": "女士大码薄棉服轻薄款2019羽绒棉衣女中长款中年妈妈冬装外套棉袄",
+      "product_image": "https://img.alicdn.com/imgextra/i4/736781331/TB2WDOzXY5K.eBjy0FnXXaZzVXa_!!736781331.jpg",
+      "skus": [
+        {
+          "id": "4ac94cc3-e55b-45f4-8dcc-1115d91392b0",
+          "image_url": "https://img.alicdn.com/imgextra/i4/736781331/TB2WDOzXY5K.eBjy0FnXXaZzVXa_!!736781331.jpg",
+          "quantity": 1,
+          "price": 12,
+          "rmb_price": 0,
+          "sku_id": "3544080781840",
+          "sku_name": "XL(建议95-110斤)(20509:382212549);黑色(1627207:28341);"
+        }
+      ],
+      "min_quantity": 1,
+      "ladder_prices": []
+    },
+    {
+      "source_id": 15,
+      "product_id": "606459254318",
+      "product_name": "黄峥基础纯色绒面高腰半身裙女2019冬季韩版显瘦A字短裙女Q21551",
+      "product_image": "https://cbu01.alicdn.com/img/ibank/2019/976/630/12449036679_1635195196.jpg",
+      "skus": [
+        {
+          "id": "20d31ef3-e204-4c0c-80ea-8b28149fd00e",
+          "image_url": "https://cbu01.alicdn.com/img/ibank/2019/720/270/12449072027_1635195196.jpg",
+          "quantity": 3,
+          "price": 5.69,
+          "rmb_price": 0,
+          "sku_id": "eb81c61de14f4adb405ffcc2c8a4a3fb",
+          "sku_name": "黑色;S"
+        },
+        {
+          "id": "b6702135-f8b7-4812-ab02-e1771fa7f33f",
+          "image_url": "https://cbu01.alicdn.com/img/ibank/2019/976/630/12449036679_1635195196.jpg",
+          "quantity": 1,
+          "price": 5.69,
+          "rmb_price": 0,
+          "sku_id": "d3fc7d39047f04bc226a2889311e0f71",
+          "sku_name": "橘红色;S"
+        }
+      ],
+      "min_quantity": 1,
+      "ladder_prices": [
+        {
+          "start_quantity": 5,
+          "end_quantity": 19,
+          "price": "5.69",
+          "rmb_price": 37
+        },
+        {
+          "start_quantity": 20,
+          "end_quantity": 49,
+          "price": "5.54",
+          "rmb_price": 36
+        },
+        {
+          "start_quantity": 50,
+          "end_quantity": null,
+          "price": "5.38",
+          "rmb_price": 35
+        }
+      ]
+    }
+  ]
 }
