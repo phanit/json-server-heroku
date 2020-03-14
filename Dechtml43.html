@@ -1,0 +1,903 @@
+<html>
+	<!-- ▽ヘッダ共通部分 2013.03.04 -->
+	<head>
+		<meta lang="JA">
+		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="format-detection" content="telephone=no">
+		<style type="text/css">@charset "utf-8";
+//*2019年度用css　まいにちハングル講座に背景黒色、丸いコーナー(小)を追加20190417
+//*2019年度用css　遠山顕の英会話楽習に赤色囲み罫実線追加20190329
+//*2018年度用css　基礎英語２LINEふうレイアウト追加201810241635
+//*2018年度用css　おもてなしのハングル赤い下線追加20180817
+//*2018年度用css　基礎３濃いピンク下線追加20180216
+//*2017年度用css　まいにちイタリア語用に修正　文字色白を追加20170831
+//*2017年度用css　まいにち中国語用に修正　角丸罫ガコミにpaddingを設定　20170417
+//*2017年度用css talbe内の文字サイズ修正してbodyの18pxに合わす　
+/*2017年度用css タイムトライアル、高校生からはじめる「現代英語」、まいにちドイツ語応用編以外（ロシア語含む） 201703061200*/
+/*2016年度用css タイムトライアル、攻略リスニング以外 201603081700*/
+/*2015年度用css タイムトライアル、攻略リスニング以外 201503202000*/
+
+i {
+}
+
+/*中国漢字  */
+
+@font-face {
+	font-family:"SourceHanSansCN";
+	font-style:normal;
+	font-weight:normal;
+	src : url("file:///android_asset/SourceHanSansCN-Regular.otf") format("opentype"); }
+
+
+/*中国漢字  
+@font-face {
+	font-family:"SourceHanSansCN";
+  font-style:  normal;
+  font-weight: bold;
+	src : url("file:///android_asset/SourceHanSansCN-Bold.otf") format("opentype"); }
+		
+
+/* DroidSansFallBack */
+
+@font-face {
+	font-family:"DroidSansFallback";
+	src: url("../fonts/DroidSansFallback.ttf") format("truetype");
+}
+
+
+/* 中国語漢字*/
+
+/* Android版は"SourceHanSansCN"、なければ、DroidSansFallbackに指定。iPhone版はSTHeitiSC-Lightに指定。なにもなければ、sans-serif / */
+.chinese-character {
+	font-family: "SourceHanSansCN", "DroidSansFallback", "STHeitiSC-Light", sans-serif;
+}
+
+
+/*ハングル  
+
+@font-face {
+	font-family:"SourceHanSansKR";
+	font-style:normal;
+	font-weight:normal;
+	src : url("file:///android_asset/SourceHanSansKR-Regular.otf") format("opentype"); }
+
+/*ハングル  
+@font-face {
+	font-family:"SourceHanSansKR";
+	font-style:  normal;
+	font-weight: bold;
+	src : url("file:///android_asset/SourceHanSansKR-Bold.otf") format("opentype"); }
+
+
+
+/* ハングル従来型*/
+/* Androidでは"SourceHanSansKR なければデフォルト。iPhone版はSTHeitiK-Lightに指定 */
+.stheitik-light {
+	font-family: "SourceHanSansKR",  "STHeitiK-Light", sans-serif;
+}
+
+/* Androidでは"SourceHanSansKR なければデフォルト。iPhone版はSTHeitiK-Lightに指定 */
+.hangul {
+	font-family: "SourceHanSansKR",  "STHeitiK-Light", sans-serif;
+}
+
+/* 欧文*/
+
+
+@font-face {
+	font-family:"DejaVuLGCSans";
+	font-style:normal;
+	font-weight:normal;
+	src: url("file:///android_asset/DejaVuLGCSansCondensed.ttf") format("opentype"),
+		local("DejaVuLGCSansCondensed") ;
+}
+@font-face {
+	font-family:"DejaVuLGCSans";
+	font-style:italic;
+	font-weight:normal;
+	src: url("file:///android_asset/DejaVuLGCSansCondensed-Oblique.ttf") format("opentype") ,
+		local("DejaVuLGCSansCondensed-Oblique");
+}
+
+@font-face {
+  font-family: "DejaVuLGCSans";
+  font-style:  normal;
+  font-weight: bold;
+  src: url("file:///android_asset/DejaVuLGCSansCondensed-Bold.ttf") format("opentype"),
+  	local("DejaVuLGCSansCondensed-Bold");
+}
+@font-face {
+  font-family: "DejaVuLGCSans";
+  font-style:  italic;
+  font-weight: bold;
+  src: url("file:///android_asset/DejaVuLGCSansCondensed-BoldOblique.ttf") format("opentype"),
+  	local("DejaVuLGCSansCondensed-BoldOblique");
+}
+
+/* ロシア語アクセントつきフォント*/
+
+@font-face {
+	font-family:"RustoneSans";
+	font-style:normal;
+	font-weight:normal;
+	src: url("file:///android_asset/Rustone-Sans.ttf") format("opentype"),
+		local("Rustone-Sans") ;
+}
+@font-face {
+	font-family:"RustoneSans";
+	font-style:italic;
+	font-weight:normal;
+	src: url("file:///android_asset/Rustone-Sans-Oblique.ttf") format("opentype"),
+		local("Rustone-Sans-Oblique");
+}
+
+@font-face {
+	font-family:"RustoneSans";
+    font-style:  normal;
+    font-weight: bold;
+    src: url("file:///android_asset/Rustone-Sans-Bold.ttf") format("opentype"),
+		local("Rustone-Sans-Bold");
+}
+@font-face {
+	font-family:"RustoneSans";
+    font-style:  italic;
+    font-weight: bold;
+    src: url("file:///android_asset/Rustone-Sans-BoldObl.ttf") format("opentype"),
+		local("Rustone-Sans-BoldObl");
+}
+
+
+/* 英語書体 (英語記号、ラテン語、ギリシャ語、キリル文字を含む）*/
+.en-sans {
+font-family:"DejaVuLGCSans", Helvetica, sans-serif, sans-serif-ja;
+}
+
+/* ロシア語アクセント記号付書体*/
+.rustone-sans {
+font-family:"RustoneSans", Helvetica, sans-serif, sans-serif-ja;
+}
+
+/* Tohoピンイン */
+
+@font-face {
+	font-family:"TohoPinyin W3";
+	src: url("file:///android_asset/tspnyn3.ttf") format("truetype");
+}
+@font-face {
+	font-family:"TohoPinyin W6";
+	src: url("file:///android_asset/tspnyn6.ttf") format("truetype");
+}
+@font-face {
+	font-family:"TohoPinyinG W5";
+	src: url("file:///android_asset/tspnyng5.ttf") format("truetype");
+}
+
+
+
+
+
+/* TohoピンインW3に指定 / iPhone版でフォントを持っていない場合Helvetica */
+.tohopinyinw3{
+	font-family: "TohoPinyin W3", "Helvetica";
+}
+/* TohoピンインW6に指定 / iPhone版でフォントを持っていない場合Helvetica */
+.tohopinyinw6{
+	font-family: "TohoPinyin W6", "Helvetica";  
+}
+/* TohoピンインG5に指定 / iPhone版でフォントを持っていない場合Helvetica */
+.tohopinyingw5{
+	font-family: "TohoPinyinG W5", "Helvetica";
+}
+
+
+/* IPAゴシック */
+
+@font-face {
+	font-family:"IPAexGothic";
+	src: url("../fonts/ipaexg.ttf") format("truetype");
+}
+
+
+
+/* iPhone版はHiraKakuProN-W3に指定 / Android版はIPAゴシックに指定 */
+.japanese-w3 {
+	font-family: "IPAexGothic", "HiraKakuProN-W3";
+}
+
+
+
+/* iPhone版はHiraKakuPro-W6に指定 / Android版はIPAゴシックに指定 */
+.japanese-w6 {
+	font-family: "IPAexGothic", "HiraKakuPro-W6";
+}
+/* AmericanTypewriterに指定 */
+.americantypewriter {
+	font-family: "AmericanTypewriter";
+}
+/* Helveticaに指定 */
+.helvetica {
+	font-family: "Helvetica";
+}
+/* MS UI Gothicに指定 */
+.msuigothic {
+	font-family: "MS UI Gothic";
+}
+/* monospaceに指定 */
+.monospace {
+	font-family: "monospace";
+}
+/* STHeitiJ-Lightに指定 */
+.stheitij-light {
+	font-family: "STHeitiJ-Light";
+}
+/* STHeitiJ-Mediumに指定 */
+.stheitij-medium {
+	font-family: "STHeitiJ-Medium";
+}
+
+/* STHeitiK-Mediumに指定 韓国語漢字指定、Androidでは、デフォルトの日本語書体が使われるように*/
+.stheitik-medium {
+	font-family: "STHeitiK-Medium";
+}
+
+/* STHeitiSC-Mediumに指定 中国漢字のための指定ですが、AndroidではDroidSansFallbackになるように*/
+.stheitisc-medium {
+	font-family: "DroidSansFallback", "STHeitiSC-Medium";
+}
+/* STHeitiTC-Lightに指定 中国漢字のための指定ですが、AndroidではDroidSansFallbackになるように*/
+.stheititc-light {
+	font-family: "DroidSansFallback", "STHeitiTC-Light";
+}
+/* STHeitiTC-Mediumに指定 中国漢字のための指定ですが、AndroidではDroidSansFallbackになるように*/
+.stheititc-medium {
+	font-family: "DroidSansFallback", "STHeitiTC-Medium";
+}
+
+/* 先方CSS用指定 */
+
+/* 文字を太字に */
+.bold {
+    -webkit-text-stroke-width: 0.7px;
+}
+
+
+/* 文字を太字に
+.bold {
+    font-weight: bold;
+}
+
+/* 文字を斜体に */
+.italic {
+    font-style: italic;
+}
+/**
+ * 文章全体を1.5文字下げ
+ */
+.p4 {
+    margin: 0.0px 0.0px 1em 1.5em;
+    text-indent:0em;
+    text-align:left;
+    }
+/**
+ * 文章全体を1.5文字下げと２行目から1.5文字下げ
+ */
+.p5 {
+    margin: 0.0px 0.0px 1em 3em;
+    text-indent:-1.5em;
+    text-align:left;
+    }
+
+
+
+
+/* bodyの指定 */
+
+body {
+ font-style : normal;
+ font-size : 18px;
+ font-family : "DejaVuLGCSans",Helvetica, HiraKakuProN-W3, sans-serif;
+ line-height: 1.50;
+ }
+
+ul{
+	margin-left:15px;
+	padding-left:5px;
+	}
+	
+ul li{
+	list-style:none;
+	list-style-position:outside;
+	margin-bottom: 5px;
+	}
+	
+table tr td{
+	font-size : 18px;
+	vertical-align: top;
+	}
+	
+/**
+ * ２行目から1.5文字下げ
+*/
+.p1 {
+	margin: 0.0px 0.0px 1em 1.5em;
+	text-indent:-1.5em;
+	text-align:left;
+	}
+
+/**
+* 改行禁止
+*/
+.nobr {
+	white-space: nowrap;
+		}
+
+/**
+ * 本文開始位置指定
+
+
+.title {
+	padding-bottom: 50px;
+    font-weight: bold;
+	font-size: 1.45em;
+	}
+
+
+/**
+*/
+.title {
+	padding-bottom: 50px;
+	-webkit-text-stroke-width: 0.7px;
+	font-size: 1.45em;
+	}
+
+
+
+
+
+/* 文字を下線付きに */
+.em-line {
+	border-bottom:solid thin ;
+
+}
+/* 文字色を赤色に */
+.color-red {
+	color: #ff0000;
+}
+/* 文字色を青色に */
+.color-blue {
+	color: #0000ff;
+}
+/* 文字色を黒色に */
+.color-black {
+	color: #000000;
+}
+/* 文字色を橙色に */
+.color-orangered {
+	color: #fa8072;
+}
+/* 文字色をシアン色に */
+.color-cyan {
+	color: #00bfff;
+}
+/* 文字色をピンク色に */
+.color-deeppink {
+	color: #ff1493;
+}
+/* 文字色を薄桃色に */
+.color-pink {
+	color: #ee82ee;
+}
+/* 文字色を濃紫色に */
+.color-deepviolet {
+	color: #800080;
+}
+/* 文字色を薄紫色に */
+.color-violet {
+	color: #9370db;
+}
+
+
+
+
+/* 行頭揃えに */
+.align-start {
+	text-align: left;;
+}
+/* 行中揃えに */
+.align-center {
+	text-align: center;
+}
+/* 行末揃えに */
+.align-end {
+	text-align: right;
+}
+
+
+
+/* フォントサイズ1に指定 */
+.font-size1 {
+	font-size: 0.69em;
+	/*  0.625em  */
+}
+/* フォントサイズ2に指定 */
+.font-size2 {
+	font-size: 0.89em;
+	/*  0.8333em  */
+}
+/* フォントサイズ3に指定 */
+.font-size3 {
+	font-size: 1em;
+	/*  1em  */
+}
+/* フォントサイズ4に指定 */
+.font-size4 {
+	font-size: 1.125em;
+	/*  1.125em  */
+}
+/* フォントサイズ5に指定 */
+.font-size5 {
+	font-size: 1.45em;
+	/*  1.5em  */
+}
+/* フォントサイズ6に指定 */
+.font-size6 {
+	font-size: 1.63em;
+	/*  2em  */
+}
+/* フォントサイズ7に指定 */
+.font-size7 {
+	font-size: 1.83em;
+	/*  3em  */
+}
+
+
+/* -------------------------------------------------------------
+ *2014年度,2015年度追加
+ * ------------------------------------------------------------- */
+
+/* 画面左側余白　全体に文字下げ） */
+.m-left-1em   { margin-left: 1.00em; }
+.m-left-1em50 { margin-left: 1.50em; }
+.m-left-2em   { margin-left: 2.00em; }
+.m-left-2em50 { margin-left: 2.50em; }
+.m-left-3em   { margin-left: 3.00em; }
+
+
+/* 外字の指定 */
+.gaiji-wide {
+  display:    inline-block;
+  margin:     0;
+  padding:    0;
+  border:     none;
+  background: transparent;
+  width:      auto;
+  height:     1em;
+  vertical-align: baseline;
+}
+
+/* 太字イタリックを解除 */
+.fontnormal {
+  font-weight: normal;
+  font-style:normal
+}
+
+/* -------------------------------------------------------------
+ *インラインブロック
+ * ------------------------------------------------------------- */
+.display-inline-block {
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------
+ *等幅のブロック
+ * ------------------------------------------------------------- */
+
+/* 2文字分*/
+.emblock-2em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  2em;
+}
+
+/* 5文字分*/
+.emblock-5em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  5em;
+}
+
+/* 7文字分*/
+.emblock-7em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  7em;
+}
+/* 8文字分*/
+.emblock-8em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  8em;
+}
+/* 9文字分*/
+.emblock-9em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  9em;
+}
+/* 10文字分*/
+.emblock-10em {
+  display:inline-block;
+  height: auto;
+  vertical-align:top;
+  width:  10em;
+}
+
+
+/* 突き出しインデント（ぶら下がりインデント）
+----------------------------------------------------------------
+「h-」は「hanging」の略
+---------------------------------------------------------------- */
+.h-indent-0em50  { text-indent:  -0.5em; padding-left:0.5em; }
+.h-indent-1em    { text-indent:  -1em; padding-left:  1em;   }
+.h-indent-1em50  { text-indent:  -1.5em; padding-left:1.5em; }
+.h-indent-2em    { text-indent:  -2em; padding-left:  2em;   }
+.h-indent-2em50  { text-indent:  -2.5em; padding-left:2.5em; }
+.h-indent-3em    { text-indent:  -3em; padding-left:  3em;   }
+.h-indent-3em50  { text-indent:  -3.5em; padding-left:3.5em; }
+.h-indent-4em    { text-indent:  -4em; padding-left:  4em;   }
+
+
+/* 上付文字・下付文字
+---------------------------------------------------------------- */
+/* 上付文字 */
+.super {
+  font-size:      smaller;
+  vertical-align: super; 
+}
+/* 下付文字 */
+.sub {
+  font-size:      smaller;
+  vertical-align: sub;
+}
+
+
+/* -------------------------------------------------------------
+ *基礎３用(2014)
+ * ------------------------------------------------------------- */
+
+
+/* チャンツ赤文字*/
+.chant-red {
+    text-indent:  -1em;
+    padding-left:  1em;
+    color: #ff1493;
+}
+
+/* 背景色を薄いピンク色に kieo3(2014)使用*/
+.bg-lightpink     {
+     background-color: #ffcccc; 
+}
+
+/* 文字色をピンク色に  kieo3(2014)使用*/
+.color-deeppink {
+	color: #ff1493;
+}
+/* 薄いピンク色の下線*/
+.ul-lightpink     {
+	border-bottom:solid medium #ffcccc;
+}
+
+
+/* -------------------------------------------------------------
+ *基礎2(2015）用
+ * ------------------------------------------------------------- */
+
+
+
+/* 緑色の下線*/
+.ul-green     {
+	border-bottom:solid medium #99cc99;
+}
+
+/* 文字色を緑に  kieo２使用するかどうか不明*/
+.color-deepgreen {
+	color: #339966;
+}
+
+
+
+/* -------------------------------------------------------------
+ *ハングル発音記号 上付き用
+ * ------------------------------------------------------------- */
+.super-hun {
+  font-size:      0.55em;
+  vertical-align: super; 
+}
+/* 
+----------------------------------------------------------------
+囲み罫 実線
+---------------------------------------------------------------- */
+/* 実線、点線、二重線、破線 */
+.k-solid  { border-style: solid solid solid solid;     border-width: 1px; border-color: #000000; }
+
+/* 
+----------------------------------------------------------------
+/* 行揃え
+---------------------------------------------------------------- */
+/*センター揃え*/
+.align-center {
+  text-align: center;
+  -webkit-text-align-last: auto;
+  -epub-text-align-last:   auto;
+  }
+  
+  /* インライン要素の位置揃え
+---------------------------------------------------------------- */
+.valign-inherit     { vertical-align: inherit;     }
+.valign-baseline    { vertical-align: baseline;    }
+.valign-sub         { vertical-align: sub;         }
+.valign-super       { vertical-align: super;       }
+.valign-top         { vertical-align: top;         }
+.valign-text-top    { vertical-align: text-top;    }
+.valign-middle      { vertical-align: middle;      }
+.valign-bottom      { vertical-align: bottom;      }
+.valign-text-bottom { vertical-align: text-bottom; }
+
+
+
+/* -------------------------------------------------------------
+ *2016年度追加
+ * ------------------------------------------------------------- */
+
+/* 外字画像
+---------------------------------------------------------------- */
+
+
+.gaiji {
+  display:    inline-block;
+  margin:     0;
+  padding:    0;
+  border:     none;
+  background: transparent;
+  width:      1em;
+  height:     1em;
+  vertical-align: text-bottom;
+}
+
+/* -------------------------------------------------------------
+ *基礎2(2016）用
+ * ------------------------------------------------------------- */
+
+
+/* 背景色を薄いピンク色に kieo3(2014)使用*/
+.bg-lightpink     {
+     background-color: #ffcccc; 
+}
+
+/* 文字色をピンク色に  kieo3(2014)使用*/
+.color-deeppink {
+	color: #ff1493;
+}
+
+
+
+/* -------------------------------------------------------------
+ *基礎3(2016）用
+ * ------------------------------------------------------------- */
+
+
+
+/* 水色の下線*/
+.ul-lightblue     {
+	border-bottom:solid medium #33cccc;
+}
+
+/* -------------------------------------------------------------
+ *まいにち中国語(2016）用
+ * ------------------------------------------------------------- */
+
+/**
+ * ２行目から1.5文字下げ＆下のアキなし
+*/
+.p1-akinashi {
+	margin: 0.0px 0.0px 0em 1.5em;
+	text-indent:-1.5em;
+	text-align:left;
+	}
+
+
+/* -------------------------------------------------------------
+ *スペイン語(2016）用
+ * ------------------------------------------------------------- */
+
+
+
+/* 灰色の下線*/
+.ul-lightgray     {
+	border-bottom:solid medium #cccccc;
+}
+
+
+/* -------------------------------------------------------------
+ *ロシア語(2017）用
+ * ------------------------------------------------------------- */
+
+/* 背景色を薄いグレーに*/
+.bg-gainsboro     {
+     background-color: #dcdcdc; 
+}
+
+
+/* -------------------------------------------------------------
+ *スペイン語、イタリア語(2017）用
+ * ------------------------------------------------------------- */
+/* 点線の下線*/
+.ul-dot     {
+	border-bottom:dotted medium #000000;
+}
+
+
+/* -------------------------------------------------------------
+ *基礎2(2017）用
+ * ------------------------------------------------------------- */
+
+/* 文字色をオレンジ色に*/
+.color-salmon {
+	color: #fa8072;
+}
+
+/* 薄いオレンジ色の下線*/
+.ul-lightsalmon     {
+	border-bottom:solid medium #ffa07a;
+}
+
+/* 背景色をさらに薄いオレンジ色に*/
+.bg-lightsalmon     {
+     background-color: #ffe9e0;
+}
+
+/* -------------------------------------------------------------
+ *ロシア語(2017）用
+ * ------------------------------------------------------------- */
+/* 文字色を灰色に*/
+.color-dimgray {
+	color: #696969;
+}
+
+
+
+/* -------------------------------------------------------------
+ *まいにち中国語(2017）用 
+ * ------------------------------------------------------------- */
+
+/* ケイカコミをまるくする。
+
+/* 丸いコーナー */
+.corner-radius-1em {
+  border-radius:   1em;
+  padding:0.25em 1em 0.25em 1em;
+  
+}
+
+/* ケイカコミの中の最終段落で使う。下にアキ無し
+/**
+ * ２行目から1.5文字下げ＆下のアキなし
+*/
+.p1-akinashi {
+	margin: 0.0px 0.0px 0em 1.5em;
+	text-indent:-1.5em;
+	text-align:left;
+	}
+
+/**
+ * 文章全体を1.5文字下げ＆下のアキなし
+ */
+.p4-akinashi {
+    margin: 0.0px 0.0px 0em 1.5em;
+    text-indent:0em;
+    text-align:left;
+    }
+/**
+ * 文章全体を1.5文字下げと２行目から1.5文字下げ＆下のアキなし
+ */
+.p5-akinashi {
+    margin: 0.0px 0.0px 0em 3em;
+    text-indent:-1.5em;
+    text-align:left;
+    }
+/**
+ * 文章全体の文字下げなし＆下のアキなし
+ */
+.p6-akinashi {
+    margin: 0.0px 0.0px 0em 0em;
+    text-indent:0em;
+    text-align:left;
+    }
+    
+/* -------------------------------------------------------------
+ *まいにちイタリア語（2017）応用編用
+ * ------------------------------------------------------------- */
+   
+ /* 文字色を白色に */
+.color-white {
+	color: #ffffff;
+}
+
+/* -------------------------------------------------------------
+ *基礎3(2018）用
+ * ------------------------------------------------------------- */
+/* 濃いピンク色の下線*/
+.ul-deeppink     {
+	border-bottom:solid medium #ff1493;
+}
+/* -------------------------------------------------------------
+ *おもてなしのハングル(2018）用
+ * ------------------------------------------------------------- */
+/* 赤色下線 */
+.ul-red {
+	border-bottom:solid medium #ff0000;
+}
+/* -------------------------------------------------------------
+ *LINE風レイアウト(2018 基礎２）用
+ * ------------------------------------------------------------- */
+/* 左側の話者名 */
+		.chara1 .name {text-align:left;color: #ff1493}
+/* 右側の話者名 */
+		.chara2 .name {text-align:right;color: #000000}
+/* 左側からのセリフ */
+		.chara1 .speech{border-style: solid;border-width: 4px;border-color: #ff1493;border-radius: 1.0em;padding: 0.5em;margin-right:1.5em;margin-top:-1em}
+/* 右側からのセリフ */
+		.chara2 .speech{border-style: solid;border-width: 4px;border-color: #000000;border-radius: 1.0em;padding: 0.5em;margin-left:1.5em;margin-top:-1em}
+
+
+/* -------------------------------------------------------------
+ *遠山顕の英会話楽習(2019）用
+ * ------------------------------------------------------------- */
+/* 赤色囲み罫 実線*/
+.k-solid-red     { border-style: solid solid solid solid;     border-width: 1px; border-color: #ff0000; }
+
+/* -------------------------------------------------------------
+ *まいにちハングル講座(2019）用
+ * ------------------------------------------------------------- */
+/* 背景を黒色に*/
+.bg-black     {
+     background-color: #000000;
+}
+
+/* 丸いコーナー（小） */
+.corner-radius-1em-s {
+  border-radius:   1em;
+  padding:0.05em 0.1em 0.05em 0.1em;
+}
+
+</style>
+		<title>TEXT DATA</title>
+	</head>
+	<!-- ▽ボディー部分 -->
+	<body>
+
+<!-- <span class="en-sans"></span><span class="rustone-sans"></span><span class="japanese-w3"></span><span class="em-line"></span><span class="bold"></span> -->
+<!-- <span class="sub"></span><span class="bg-gainsboro"></span>▽—▽ -->
+<!-- <span class="super"><img src="/var/mobile/Containers/Data/Application/7A24573E-573B-4284-BBC1-3CB04346DE8F/Documents/021191002_temp/yubi_russia.png" class="gaiji-wide"/></span>▽—▽ -->
+<!-- <span class="color-dimgray bold"></span>▽—▽ -->
+
+
+
+<div class="title en-sans">Учёба. Становлéние балер<span class="rustone-sans">и</span>ны.</div>
+
+<p class="p"><span class="en-sans"><span class="bg-gainsboro">(<span class="rustone-sans">Э</span>то и) петерб<span class="rustone-sans">у</span>ргская шкóла балéта, и акадéмия Вагáновой, котóрая восп<span class="rustone-sans">и</span>тывала нас</span> вот в <span class="rustone-sans">э</span>той элегáнтной красотé и сдéржанности движéний, что всё должнó быть в<span class="rustone-sans">ы</span>верено и что всё должнó имéть нéкое гармон<span class="rustone-sans">и</span>чное соотношéние.</span></p>
+<p><br /></p>
+<p class="p"><span class="en-sans"><span class="color-dimgray bold">— И как <span class="rustone-sans">э</span>тому <span class="rustone-sans">у</span>чатся?</span></span></p>
+<p class="p"><span class="en-sans">(На) <span class="rustone-sans">э</span>то невозмóжно отвéтить. <span class="rustone-sans">Э</span>тому <span class="rustone-sans">у</span>чатся с дéтства. И ­потóм тренир<span class="rustone-sans">у</span>ют <span class="rustone-sans">э</span>то кáждый день. Сказáть, как <span class="rustone-sans">э</span>то получá­ется – <span class="rustone-sans">э</span>то н<span class="rustone-sans">у</span>жно показáть всю систéму преподавáния, всю систéму обучéния с начáла до концá. На <span class="rustone-sans">э</span>тот вопрóс невозмóжно отвéтить. Он óчень простóй и óчень слóжный. Балер<span class="rustone-sans">и</span>на <span class="rustone-sans">у</span>чится <span class="rustone-sans">э</span>тому с дéтства.</span></p>
+
+<p class="p1"><br/></p>
+
+</body>
+</html>
